@@ -20,7 +20,7 @@ RUN apt-get update && apt-get -y install xvfb x11vnc wget \
     libpango-1.0-0:armhf libpangocairo-1.0-0:armhf libpangoft2-1.0-0:armhf 
 
 
-ADD supervisord.conf.armhf /etc/supervisor/conf.d/supervisord.conf
+ADD supervisord.conf.arm /etc/supervisor/conf.d/supervisord.conf
 
 RUN wget http://launchpadlibrarian.net/170877332/gconf-service-backend_3.2.6-0ubuntu2_armhf.deb
 RUN wget http://launchpadlibrarian.net/170877334/libgconf-2-4_3.2.6-0ubuntu2_armhf.deb
