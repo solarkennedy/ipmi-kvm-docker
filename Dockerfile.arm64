@@ -2,11 +2,23 @@ FROM ubuntu:14.04
 MAINTAINER Kyle Anderson <kyle@xkyle.com>
 
 ENV DEBIAN_FRONTEND noninteractive
+
+RUN dpkg --add-architecture armhf
+
 RUN apt-get update && apt-get -y install xvfb x11vnc wget \
     supervisor fluxbox icedtea-7-plugin net-tools python-numpy \
     libfile-basedir-perl libfile-desktopentry-perl libfile-mimeinfo-perl \
-    libgmp10 libisl10 libmpc3 libmpfr4 x11-xserver-utils xdg-utils \
-    libdbus-glib-1-2 libgnome-keyring0 cpp cpp-4.8 libcloog-isl4
+    libgmp10:armhf libisl10:armhf libmpc3:armhf libmpfr4:armhf \
+    x11-xserver-utils:armhf xdg-utils:armhf libdbus-glib-1-2:armhf \
+    libdbus-glib-1-2:armhf libgnome-keyring0:armhf cpp:armhf \
+    cpp-4.8:armhf libcloog-isl4:armhf libpulse0:armhf libnspr4:armhf \
+    libasound2:armhf libstdc++6:armhf libxss1:armhf libxtst6:armhf \
+    libxml2:armhf libldap-2.4-2:armhf libatk1.0-0:armhf libcairo2:armhf \
+    libcups2:armhf libexpat1:armhf libfontconfig1:armhf libudev-dev:armhf \
+    libfreetype6:armhf libgdk-pixbuf2.0-0:armhf libgssapi-krb5-2:armhf \
+    libgtk2.0-0:armhf libk5crypto3:armhf libkrb5-3:armhf libnss3:armhf \
+    libpango-1.0-0:armhf libpangocairo-1.0-0:armhf libpangoft2-1.0-0:armhf 
+
 
 ADD supervisord.conf.arm /etc/supervisor/conf.d/supervisord.conf
 
