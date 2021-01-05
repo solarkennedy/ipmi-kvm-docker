@@ -1,3 +1,5 @@
+![Docker Cloud Build Status](https://img.shields.io/docker/cloud/build/lmacka/ipmi-kvm-docker)
+
 ## ipmi-kvm-docker
 
 *Forked from solarkennedy's original and changed to include firefox-esr 52 
