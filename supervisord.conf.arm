@@ -2,7 +2,7 @@
 nodaemon=true
 
 [program:X11]
-command=/usr/bin/Xvfb :0 -screen 0 1024x768x24
+command=/usr/bin/Xvfb :0 -screen 0 %(ENV_RES)s
 autorestart=true
 
 [program:x11vnc]

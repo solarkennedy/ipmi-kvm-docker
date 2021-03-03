@@ -12,5 +12,6 @@ WORKDIR /root/
 ADD novnc /root/novnc/
 
 ENV DISPLAY :0
+ENV RES 1024x768x24
 EXPOSE 8080
 CMD ["/usr/bin/supervisord"]
