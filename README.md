@@ -29,3 +29,10 @@ In your web browser you should see the firefox, ready to connect to
 and IPMI KVM:
 
 ![IPMI Screenshot](https://raw.githubusercontent.com/solarkennedy/ipmi-kvm-docker/master/screenshot.png)
+
+### Custom resolution
+
+By default, the VNC session will run with a resolution of 1024x768 (with 24-bit color depth).
+Custom resolutions can be specified with the docker environment variable RES, and must include color depth.
+
+    $ docker run -p 8080:8080 -e RES=1600x900x24 solarkennedy/ipmi-kvm-docker
