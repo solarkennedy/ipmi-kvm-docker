@@ -12,6 +12,8 @@ Ever wanted to access and IPMI KVM console, only to find that you don't
 have network access or the right version of java or a compatible 
 browser or credentials?
 
+https://registry.hub.docker.com/r/lmacka/ipmi-kvm-docker
+
 This container runs:
 
 * Xvfb - X11 in a virtual framebuffer
