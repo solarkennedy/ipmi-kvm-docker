@@ -1,5 +1,8 @@
 ## ipmi-kvm-docker
 
+![Docker Image Size (tag)](https://img.shields.io/docker/image-size/solarkennedy/ipmi-kvm-docker/latest)
+![Docker Pulls](https://img.shields.io/docker/pulls/solarkennedy/ipmi-kvm-docker)
+
 Ever wanted to access and IPMI KVM console, only to find that you don't
 have network access or the right version of java or a compatible 
 browser or credentials?
