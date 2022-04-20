@@ -17,7 +17,7 @@ RUN apt-get update && apt-get -y install xvfb x11vnc wget \
     libcups2:armhf libexpat1:armhf libfontconfig1:armhf libudev-dev:armhf \
     libfreetype6:armhf libgdk-pixbuf2.0-0:armhf libgssapi-krb5-2:armhf \
     libgtk2.0-0:armhf libk5crypto3:armhf libkrb5-3:armhf libnss3:armhf \
-    libpango-1.0-0:armhf libpangocairo-1.0-0:armhf libpangoft2-1.0-0:armhf 
+    libpango-1.0-0:armhf libpangocairo-1.0-0:armhf libpangoft2-1.0-0:armhf
 
 
 ADD supervisord.conf.arm /etc/supervisor/conf.d/supervisord.conf
@@ -34,6 +34,7 @@ RUN dpkg -i gconf-service-backend_3.2.6-0ubuntu2_armhf.deb libgconf-2-4_3.2.6-0u
 ADD deployment.properties /root/.config/icedtea-web/deployment.properties
 
 WORKDIR /root/
+RUN mkdir -p /root/images
 ADD novnc /root/novnc/
 
 ENV DISPLAY :0

@@ -20,6 +20,7 @@ RUN wget http://launchpadlibrarian.net/218525709/chromium-browser_45.0.2454.85-0
 RUN dpkg -i gconf-service-backend_3.2.6-0ubuntu2_armhf.deb libgconf-2-4_3.2.6-0ubuntu2_armhf.deb gconf2-common_3.2.6-0ubuntu2_all.deb chromium-codecs-ffmpeg-extra_45.0.2454.85-0ubuntu0.14.04.1.1097_armhf.deb gconf-service_3.2.6-0ubuntu2_armhf.deb chromium-browser_45.0.2454.85-0ubuntu0.14.04.1.1097_armhf.deb
 
 WORKDIR /root/
+RUN mkdir -p /root/images
 ADD novnc /root/novnc/
 
 ENV DISPLAY :0
