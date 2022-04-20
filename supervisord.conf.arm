@@ -18,5 +18,5 @@ command=/usr/bin/fluxbox
 autorestart=true
 
 [program:chromium-browser]
-command=/usr/bin/chromium-browser --no-sandbox --user-data-dir --start-maximized
+command=/usr/bin/chromium-browser --no-sandbox --user-data-dir --no-sandbox -test-type --window-position=0,0 --window-size=1024,722
 autorestart=true
